@@ -1,6 +1,6 @@
 from datetime import datetime
 from re import I
-from pydantic import BaseModel, EmailStr, conint
+from pydantic import BaseModel, conint
 from typing import Optional
 
 
