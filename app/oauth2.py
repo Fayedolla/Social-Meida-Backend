@@ -1,7 +1,7 @@
 from csv import excel_tab
 from jose import jwt, JWTError, ExpiredSignatureError
 from sqlalchemy.orm import session
-from config import settings
+from .config import settings
 from fastapi.security import OAuth2PasswordBearer
 from fastapi import HTTPException, Depends, status
 from sqlalchemy.orm import Session
