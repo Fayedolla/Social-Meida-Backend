@@ -135,6 +135,6 @@ This project is licensed under the **MIT License** — feel free to use and modi
 
 ## 💼 About the Developer
 
-Developed by **Ahmed Fayed** — AI/ML Engineer & Backend Developer.  
+Developed by **Ahmed Mohamed Fayed** — AI/ML Engineer & Backend Developer.  
 [GitHub](https://github.com/Fayedolla)  |  [LinkedIn](www.linkedin.com/in/ahmed-fayed-04a5112b7)  
 fayeda660@gmail.com
