@@ -118,7 +118,7 @@ Once the server is running:
 ![Auth Routes Swagger Screenshot](./images/auth.png)
 
 ### **User Routes** (`/Users`)
-![User Routes Swagger Screenshot](./images/user.png)
+![User Routes Swagger Screenshot](./images/users.png)
 
 ### **Post Routes** (`/Posts`)
 ![Post Routes Swagger Screenshot](./images/post.png)
