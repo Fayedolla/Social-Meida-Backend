@@ -1,0 +1,22 @@
+version: "3"
+services:
+  api:
+    image: fayedolla/social-media-backend
+    ports:
+      - 80:8000d
+    env_file:
+      - ./app/.env
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:15
+    environment:
+      - POSTGRES_PASSWORD=20102004
+      - POSTGRES_DB=fastapi
+      - POSTGRES_USER=postgres
+    volumes:
+      - postgres-db:/var/lib/postgresql/data
+
+volumes:
+  postgres-db:

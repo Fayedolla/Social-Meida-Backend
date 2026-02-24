@@ -1,7 +1,6 @@
 from datetime import datetime
-from re import I
-from pydantic import BaseModel, conint
-from typing import Optional
+from pydantic import BaseModel, Field
+from typing import Optional, Annotated
 
 
 class PostBase(BaseModel):
@@ -19,7 +18,6 @@ class UserOut(BaseModel):
 
     class Config:
         from_attributes = True
-    
 
 class Post(PostBase):
     id: int
@@ -28,7 +26,7 @@ class Post(PostBase):
     owner: UserOut
 
     class Config:
-        orm_mode = True
+        from_attributes = True  # fixed: was orm_mode
 
 
 class PostOut(BaseModel):
@@ -36,14 +34,11 @@ class PostOut(BaseModel):
     votes: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True  # fixed: was orm_mode
 
 class UserCreate(BaseModel):
     email: str
     password: str
-
-    class Config:
-        from_attributes = True
 
 class UserLogin(UserCreate):
     pass
@@ -57,4 +52,4 @@ class TokenData(BaseModel):
 
 class Vote(BaseModel):
     post_id: int
-    dir: conint(ge=0, le=1)
+    dir: Annotated[int, Field(ge=0, le=1)]  # fixed: was conint

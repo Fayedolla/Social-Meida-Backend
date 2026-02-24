@@ -25,4 +25,4 @@ app.include_router(votes.router)
 
 @app.get("/")
 def root():
-    return {"message": "Social Media Backend API V2 is running successfully on Azure!"}
+    return {"message": "Social Media Backend API with sync!!"}
